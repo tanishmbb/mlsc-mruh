@@ -112,6 +112,14 @@ const EVENTS: Event[] = [
     date: "2026-05-29",
     time: "5:00 PM - 6:00 PM",
     venue: "TBD",
+  },
+  {
+    id: "upcoming-2",
+    title: "Power BI for Beginners",
+    description: "A beginner's guide to Power BI.",
+    date: "2026-06-01",
+    time: "5:00 PM - 6:00 PM",
+    venue: "TBD",
   }
 ]
 
