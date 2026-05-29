@@ -16,6 +16,24 @@ type Event = {
 
 const EVENTS: Event[] = [
   {
+    id: "event-10",
+    title: "How Enterprises Use AI Foundries: Scaling Copilot-Enabled Development Across Teams",
+    description: "Learn how enterprises are leveraging AI foundries and Copilot to scale their development.",
+    date: "2026-03-28",
+    time: "11:30 AM - 3:30 PM",
+    venue: "Microsoft Office, Hyderabad",
+    poster_url: "/images/event10poster.jpeg",
+  },
+  {
+    id: "event-9",
+    title: "Git and github version for modern developers",
+    description: "A comprehensive guide to Git and GitHub for modern developers.",
+    date: "2026-05-28",
+    time: "11:30 AM - 1:30 PM",
+    venue: "Microsoft teams",
+    poster_url: "/images/event9poster.jpeg",
+  },
+  {
     id: "upcoming-1",
     title: "Data analysis and excel pivot table",
     description: "Learn the fundamentals of data analysis and master Excel pivot tables.",

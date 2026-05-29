@@ -152,6 +152,34 @@ const eventGalleries = [
       "/images/event8/Img15.jpg",
     ],
   },
+  {
+    id: 9,
+    title: "Git and github version for modern developers",
+    date: "May 28, 2026",
+    images: [
+      "/images/event9poster.jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.08 PM (2).jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.08 PM.jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.09 PM (1).jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.09 PM (2).jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.09 PM.jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.10 PM.jpeg",
+      "/images/event9/WhatsApp Image 2026-05-29 at 5.54.11 PM.jpeg",
+    ],
+  },
+  {
+    id: 10,
+    title: "How Enterprises Use AI Foundries: Scaling Copilot-Enabled Development Across Teams",
+    date: "March 28, 2026",
+    images: [
+      "/images/event10poster.jpeg",
+      "/images/event10/WhatsApp Image 2026-05-29 at 6.01.42 PM.jpeg",
+      "/images/event10/WhatsApp Image 2026-05-29 at 6.01.45 PM.jpeg",
+      "/images/event10/WhatsApp Image 2026-05-29 at 6.01.48 PM.jpeg",
+      "/images/event10/WhatsApp Image 2026-05-29 at 6.01.49 PM (1).jpeg",
+      "/images/event10/WhatsApp Image 2026-05-29 at 6.01.49 PM.jpeg",
+    ],
+  },
 ]
 
 export default function GalleryPage() {
