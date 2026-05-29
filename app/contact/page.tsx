@@ -23,7 +23,7 @@ const leadershipContacts = [
     name: "V. Sree Harshitha",
     email: "Sreeharshitha.Vakkantham@studentambassadors.com",
     phone: "+91 93464 20853",
-    linkedin: "https://www.linkedin.com/in/pebbeti-charitha-reddy-839257286",
+    linkedin: "https://www.linkedin.com/in/v-sree-harshitha",
     accent: "border-blue-500",
   },
   {
@@ -31,7 +31,7 @@ const leadershipContacts = [
     name: "P. Venkata Sesha Sai Jatin",
     email: "pranaytadakamalla@outlook.com",
     phone: "+91 824 763 1882",
-    linkedin: "https://www.linkedin.com/in/sai-pranay-tadakamalla-7570bb1a6/",
+    linkedin: "https://www.linkedin.com/in/sai-jatin",
     accent: "border-purple-500",
   },
   {
@@ -39,7 +39,7 @@ const leadershipContacts = [
     name: "M. Adieshwar Reddy",
     email: "vishnuvardhanreddypadala@gmail.com",
     phone: "+91 90141 19133",
-    linkedin: "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
+    linkedin: "https://www.linkedin.com/in/m-adieshwar-reddy",
     accent: "border-green-500",
   },
 ]

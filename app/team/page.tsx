@@ -96,7 +96,7 @@ const coreTeam: TeamMemberType[] = [
     designation: "Student Leader",
     msTitle: "Associate Ambassador",
     image: "/images/harshitha.jpeg",
-    linkedin: "https://www.linkedin.com/in/pebbeti-charitha-reddy-839257286",
+    linkedin: "https://www.linkedin.com/in/v-sree-harshitha",
   },
   {
     name: "P. Venkata Sesha Sai Jatin",
@@ -104,7 +104,7 @@ const coreTeam: TeamMemberType[] = [
     designation: "Student Leader",
     msTitle: "Student Lead",
     image: "/images/jatin.jpeg",
-    linkedin: "https://www.linkedin.com/in/sai-pranay-tadakamalla-7570bb1a6/",
+    linkedin: "https://www.linkedin.com/in/sai-jatin",
   },
   {
     name: "M. Adieshwar Reddy",
@@ -112,7 +112,7 @@ const coreTeam: TeamMemberType[] = [
     designation: "Student Leader",
     msTitle: "Student Ambassador",
     image: "/images/Adhii.jpeg",
-    linkedin: "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
+    linkedin: "https://www.linkedin.com/in/m-adieshwar-reddy",
   },
   {
     name: "P. Lakshmi Sai Meghana",
@@ -120,7 +120,7 @@ const coreTeam: TeamMemberType[] = [
     designation: "Student Leader",
     msTitle: "Student Ambassador",
     image: "/images/Meghana_Markting_Lead.jpg",
-    linkedin: "https://www.linkedin.com/in/adieshwar-reddy-mogili-3b4b11332",
+    linkedin: "https://www.linkedin.com/in/p-lakshmi-sai-meghana",
   },
   {
     name: "M. Ganesh",
@@ -128,7 +128,7 @@ const coreTeam: TeamMemberType[] = [
     designation: "Student Leader",
     msTitle: "Student Lead",
     image: "/images/Ganesh_Event_Coord.jpg",
-    linkedin: "https://www.linkedin.com/in/ganesh-mandugula-147207344",
+    linkedin: "https://www.linkedin.com/in/m-ganesh",
   },
 ];
 
@@ -139,7 +139,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Creative Team",
     msTitle: "Student Leader",
     image: "/images/shlok.jpeg",
-    linkedin: "https://www.linkedin.com/in/sree-harshitha-vakkantham-40931a310",
+    linkedin: "https://www.linkedin.com/in/shlok",
   },
   {
     name: "Tanish",
@@ -147,7 +147,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Technical Team",
     msTitle: "Student Lead",
     image: "/images/tanish.jpg",
-    linkedin: "https://www.linkedin.com/in/sree-harshitha-vakkantham-40931a310",
+    linkedin: "https://www.linkedin.com/in/tanish",
   },
   {
     name: "Divya Rana",
@@ -155,7 +155,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Technical Team",
     msTitle: "Student Ambassador",
     image: "/images/Divya_Technical_Lead.jpg",
-    linkedin: "https://www.linkedin.com/in/divya-rana-a4634833b",
+    linkedin: "https://www.linkedin.com/in/divya-rana",
   },
   {
     name: "V. Siri Chandana",
@@ -163,7 +163,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Community Team",
     msTitle: "Student Ambassador",
     image: "/images/SiriChandana_Community_Engagement.jpg",
-    linkedin: "https://www.linkedin.com/in/siri-chandana-vemula",
+    linkedin: "https://www.linkedin.com/in/v-siri-chandana",
   },
   {
     name: "Rajnikant Kumar",
@@ -171,7 +171,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Events Team",
     msTitle: "Student Lead",
     image: "/images/Rajnikant_Event_Coord.jpg",
-    linkedin: "https://www.linkedin.com/in/rajnikant-kumar-27bb22354",
+    linkedin: "https://www.linkedin.com/in/rajnikant-kumar",
   },
   {
     name: "Sathwik",
@@ -179,7 +179,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Events Team",
     msTitle: "Student Ambassador",
     image: "/images/sathwik.jpg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/sathwik",
   },
   {
     name: "Bharath",
@@ -187,7 +187,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Community Team",
     msTitle: "Student Leader",
     image: "/images/Bharath_Community_Engagement.jpg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/bharath",
   },
   {
     name: "L. Likitha Sai",
@@ -195,7 +195,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Community Team",
     msTitle: "Student Ambassador",
     image: "/images/LikhithaSai_Community_Engagement.jpg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/l-likitha-sai",
   },
   {
     name: "Manasa",
@@ -203,7 +203,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "Events Team",
     msTitle: "Student Ambassador",
     image: "/images/Manasa_Event_Coord.jpg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/manasa",
   },
   {
     name: "Sami",
@@ -211,7 +211,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "MLSC MRUH",
     msTitle: "Student Ambassador",
     image: "/placeholder-user.jpg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/sami",
   },
   {
     name: "Pranathi",
@@ -219,7 +219,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "MLSC MRUH",
     msTitle: "Student Ambassador",
     image: "/images/pranati.jpeg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pranathi",
   },
   {
     name: "Rishikesh",
@@ -227,7 +227,7 @@ const departmentTeam: TeamMemberType[] = [
     designation: "MLSC MRUH",
     msTitle: "Student Ambassador",
     image: "/images/rishikesh.jpeg",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/rishikesh",
   },
 ];
 

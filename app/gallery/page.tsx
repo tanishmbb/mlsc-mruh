@@ -136,7 +136,21 @@ const eventGalleries = [
     date: "March 25, 2026",
     images: [
       "/images/event8poster.jpeg",
-      ...Array.from({ length: 15 }, (_, i) => `/images/event8/Img${i + 1}.jpg`)
+      "/images/event8/Img1.jpg",
+      // Img2 removed as requested (3rd image)
+      "/images/event8/Img3.jpg",
+      "/images/event8/Img4.jpg",
+      "/images/event8/Img5.jpg",
+      "/images/event8/Img6.jpg",
+      "/images/event8/Img7.jpg",
+      "/images/event8/Img8.jpg",
+      "/images/event8/Img9.jpg",
+      "/images/event8/Img10.jpg",
+      "/images/event8/Img11.jpg",
+      "/images/event8/Img12.jpg",
+      "/images/event8/Img13.jpg",
+      "/images/event8/Img14.jpg",
+      "/images/event8/Img15.jpg",
     ],
   },
 ]
