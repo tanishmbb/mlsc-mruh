@@ -218,7 +218,7 @@ const departmentTeam: TeamMemberType[] = [
     role: "Team Member",
     designation: "MLSC MRUH",
     msTitle: "Student Ambassador",
-    image: "/placeholder-user.jpg",
+    image: "/images/pranati.jpeg",
     linkedin: "",
   },
   {
