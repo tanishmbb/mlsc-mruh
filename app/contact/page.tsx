@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import ContactForm from "@/components/contact/contact-form"
 import {
   MapPin,
   Mail,
@@ -21,29 +20,26 @@ import { Button } from "@/components/ui/button"
 const leadershipContacts = [
   {
     role: "President",
-    name: "P. Charitha Reddy",
-    email: "charithareddy1074@gmail.com",
-    phone: "+91 80990 63869",
-    linkedin:
-      "https://www.linkedin.com/in/pebbeti-charitha-reddy-839257286",
+    name: "V. Sree Harshitha",
+    email: "Sreeharshitha.Vakkantham@studentambassadors.com",
+    phone: "+91 93464 20853",
+    linkedin: "https://www.linkedin.com/in/pebbeti-charitha-reddy-839257286",
     accent: "border-blue-500",
   },
   {
     role: "Vice President",
-    name: "Tadakamalla Sai Pranay",
+    name: "P. Venkata Sesha Sai Jatin",
     email: "pranaytadakamalla@outlook.com",
-    phone: "+91 86881 83168",
-    linkedin:
-      "https://www.linkedin.com/in/sai-pranay-tadakamalla-7570bb1a6/",
+    phone: "+91 824 763 1882",
+    linkedin: "https://www.linkedin.com/in/sai-pranay-tadakamalla-7570bb1a6/",
     accent: "border-purple-500",
   },
   {
     role: "General Secretary",
-    name: "P. Vishnu Vardhan Reddy",
+    name: "M. Adieshwar Reddy",
     email: "vishnuvardhanreddypadala@gmail.com",
-    phone: "+91 98486 07865",
-    linkedin:
-      "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
+    phone: "+91 90141 19133",
+    linkedin: "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
     accent: "border-green-500",
   },
 ]
@@ -83,26 +79,31 @@ export default function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Get In <span className="text-primary">Touch</span>
+              Join Our <span className="text-primary">Community</span>
             </motion.h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-              Questions about MLSC MRUH? Want to join the community?
-              We’d love to hear from you.
+              Questions about MLSC MRUH? Join our WhatsApp groups to connect with the team.
             </p>
 
-            <Button
-              size="lg"
-              className="rounded-full px-10 py-6 text-lg"
-              onClick={() =>
-                document
-                  .getElementById("contact-form")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <UserPlus className="mr-2" />
-              Send a Message
-            </Button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                size="lg"
+                className="rounded-full px-10 py-6 text-lg bg-green-600 hover:bg-green-700 text-white"
+                onClick={() => window.open("https://chat.whatsapp.com/IEaAWX8Y5Ge3NhueX8RSdv?s=sh&p=a&ilr=1", "_blank")}
+              >
+                <UserPlus className="mr-2" />
+                Join 2nd Year Group
+              </Button>
+              <Button
+                size="lg"
+                className="rounded-full px-10 py-6 text-lg bg-green-600 hover:bg-green-700 text-white"
+                onClick={() => window.open("https://chat.whatsapp.com/C3g13qIIIbv60E96U9Lzci?s=sh&p=a&ilr=1", "_blank")}
+              >
+                <UserPlus className="mr-2" />
+                Join 3rd Year Group
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -154,10 +155,10 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* INFO + FORM */}
+        {/* INFO */}
         <section className="py-24">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
                   icon: MapPin,
@@ -178,17 +179,13 @@ export default function ContactPage() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.03 }}
-                  className="bg-card border border-border rounded-2xl p-6 shadow-sm"
+                  className="bg-card border border-border rounded-2xl p-6 shadow-sm text-center flex flex-col items-center"
                 >
-                  <item.icon className="text-primary mb-3" />
+                  <item.icon className="text-primary mb-3 w-8 h-8" />
                   <h4 className="font-semibold mb-1">{item.title}</h4>
                   <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </motion.div>
               ))}
-            </div>
-
-            <div id="contact-form">
-              <ContactForm />
             </div>
           </div>
         </section>

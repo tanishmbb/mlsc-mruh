@@ -130,6 +130,15 @@ const eventGalleries = [
       "/images/event7/Img5.jpg",
     ],
   },
+  {
+    id: 8,
+    title: "Mastering Git & GitHub",
+    date: "March 25, 2026",
+    images: [
+      "/images/event8poster.jpeg",
+      ...Array.from({ length: 15 }, (_, i) => `/images/event8/Img${i + 1}.jpg`)
+    ],
+  },
 ]
 
 export default function GalleryPage() {

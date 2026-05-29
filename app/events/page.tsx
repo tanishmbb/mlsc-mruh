@@ -14,13 +14,21 @@ type Event = {
   members_only?: boolean
 }
 
-// Static events — update this list to add/edit events
-const EVENTS: Event[] = []
+const EVENTS: Event[] = [
+  {
+    id: "upcoming-1",
+    title: "Data analysis and excel pivot table",
+    description: "Learn the fundamentals of data analysis and master Excel pivot tables.",
+    date: "2026-05-29",
+    time: "5:00 PM - 6:00 PM",
+    venue: "TBD",
+  }
+]
 
 export default function EventsPage() {
   const now = new Date()
-  const upcoming = EVENTS.filter(e => new Date(e.date) >= now)
-  const past = EVENTS.filter(e => new Date(e.date) < now)
+  const upcoming = EVENTS.filter(e => new Date(e.date).getTime() + 86400000 >= now.getTime())
+  const past = EVENTS.filter(e => new Date(e.date).getTime() + 86400000 < now.getTime())
 
   return (
     <div className="pt-24 pb-16 px-6 max-w-7xl mx-auto min-h-screen">
@@ -51,10 +59,75 @@ export default function EventsPage() {
         <>
           {upcoming.length > 0 && (
             <section className="mb-16">
-              <h2 className="text-2xl font-semibold mb-6">Upcoming Events</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <h2 className="text-2xl font-semibold mb-8 text-center md:text-left">Upcoming Events</h2>
+              
+              {/* Timeline Layout for Upcoming Events */}
+              <div className="relative border-l border-primary/30 ml-4 md:ml-6 space-y-12">
                 {upcoming.map((event, i) => (
-                  <EventCard key={event.id} event={event} index={i} />
+                  <motion.div 
+                    key={event.id}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="relative pl-8 md:pl-12"
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
+                    
+                    <div className="bg-card border rounded-2xl p-6 shadow-md hover:shadow-xl transition-all">
+                      <div className="flex flex-col md:flex-row gap-6">
+                        {event.poster_url && (
+                          <div className="w-full md:w-48 h-48 md:h-auto rounded-xl overflow-hidden shrink-0 bg-muted">
+                            <img
+                              src={event.poster_url}
+                              alt={event.title}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        )}
+                        
+                        <div className="flex-1 space-y-4">
+                          <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-2xl font-bold text-primary">{event.title}</h3>
+                            {event.members_only && (
+                              <span className="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full whitespace-nowrap">
+                                Members Only
+                              </span>
+                            )}
+                          </div>
+                          
+                          <p className="text-muted-foreground">
+                            {event.description}
+                          </p>
+
+                          <div className="flex flex-wrap gap-4 text-sm font-medium">
+                            <div className="flex items-center gap-2 text-foreground/80 bg-secondary/30 px-3 py-1.5 rounded-lg">
+                              <Calendar className="w-4 h-4 text-primary" />
+                              {new Date(event.date).toLocaleDateString("en-IN", {
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric",
+                              })}
+                            </div>
+                            
+                            {event.time && (
+                              <div className="flex items-center gap-2 text-foreground/80 bg-secondary/30 px-3 py-1.5 rounded-lg">
+                                <Clock className="w-4 h-4 text-primary" />
+                                {event.time}
+                              </div>
+                            )}
+                            
+                            {event.venue && (
+                              <div className="flex items-center gap-2 text-foreground/80 bg-secondary/30 px-3 py-1.5 rounded-lg">
+                                <MapPin className="w-4 h-4 text-primary" />
+                                {event.venue}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </section>
