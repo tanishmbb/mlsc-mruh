@@ -1,7 +1,11 @@
 {
-  "name": "my-v0-project",
+  "name": "mlsc-mruh",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.4.0",
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -49,7 +53,7 @@
     "html5-qrcode": "^2.3.8",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
-    "next": "14.2.16",
+    "next": "14.2.30",
     "next-themes": "^0.4.4",
     "qrcode.react": "^4.2.0",
     "react": "^18",
