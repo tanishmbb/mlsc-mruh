@@ -213,7 +213,7 @@ export default function GalleryPage() {
             </motion.div>
 
             <div className="space-y-16">
-              {eventGalleries.map((gallery, index) => (
+              {[...eventGalleries].reverse().map((gallery, index) => (
                 <EventGallery
                   key={gallery.id}
                   gallery={gallery}

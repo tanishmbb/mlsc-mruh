@@ -2,25 +2,22 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Linkedin, Instagram, Youtube, User } from "lucide-react";
+import { Linkedin, Instagram, Youtube } from "lucide-react";
 
 type TeamMemberType = {
   name: string;
   role: string;
   designation: string;
+  msTitle: string;
   image: string;
   linkedin?: string;
 };
 
-// Typed Variants
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 };
 
@@ -51,7 +48,7 @@ function TeamMember({ member }: { member: TeamMemberType }) {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
 
-        {/* Social Link Overlay */}
+        {/* LinkedIn overlay */}
         {member.linkedin && (
           <div className="absolute top-4 right-4 translate-x-12 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
             <a
@@ -66,32 +63,38 @@ function TeamMember({ member }: { member: TeamMemberType }) {
         )}
       </div>
 
-      <div className="relative p-6 text-center -mt-6">
-        <div className="relative mx-auto -mt-16 h-20 w-1 pt-1 opacity-0"></div>{" "}
-        {/* Spacer for alignment if needed, or visual trick */}
+      <div className="relative p-6 text-center">
         <div className="relative z-10 transform transition-transform duration-300">
+          {/* Line 1 — Name */}
           <h3 className="text-xl font-bold text-white mb-1 group-hover:text-blue-200 transition-colors">
             {member.name}
           </h3>
+          {/* Line 2 — Club Role */}
           <p className="text-sm font-semibold text-blue-400 mb-1 uppercase tracking-wider">
             {member.role}
           </p>
-          <p className="text-xs text-gray-300 font-medium">
+          {/* Line 3 — Department */}
+          <p className="text-xs text-gray-300 font-medium mb-2">
             {member.designation}
           </p>
+          {/* Line 4 — Microsoft Title */}
+          <span className="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-500/20 border border-blue-400/30 text-blue-300 tracking-wide">
+            {member.msTitle}
+          </span>
         </div>
       </div>
     </motion.div>
   );
 }
 
-/* ---------------- DATA ---------------- */
+/* ─────────────────── DATA ─────────────────── */
 
 const coreTeam: TeamMemberType[] = [
   {
     name: "V. Sree Harshitha",
     role: "President",
     designation: "Student Leader",
+    msTitle: "Associate Ambassador",
     image: "/images/harshitha.jpeg",
     linkedin: "https://www.linkedin.com/in/pebbeti-charitha-reddy-839257286",
   },
@@ -99,28 +102,23 @@ const coreTeam: TeamMemberType[] = [
     name: "P. Venkata Sesha Sai Jatin",
     role: "Vice President",
     designation: "Student Leader",
+    msTitle: "Student Lead",
     image: "/images/jatin.jpeg",
     linkedin: "https://www.linkedin.com/in/sai-pranay-tadakamalla-7570bb1a6/",
   },
   {
-    name: "M.Adieshwar Reddy",
+    name: "M. Adieshwar Reddy",
     role: "General Secretary",
     designation: "Student Leader",
+    msTitle: "Student Ambassador",
     image: "/images/Adhii.jpeg",
-    linkedin:
-      "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
+    linkedin: "https://www.linkedin.com/in/vishnu-vardhan-reddy-padala-a3a13330b",
   },
-  // {
-  //   name: "Adil",
-  //   role: "Secretary",
-  //   designation: "Student Leader",
-  //   image: "/images/",
-  //   linkedin: "https://www.linkedin.com/in/adieshwar-reddy-mogili-3b4b11332",
-  // },
   {
     name: "P. Lakshmi Sai Meghana",
     role: "Secretary",
     designation: "Student Leader",
+    msTitle: "Student Ambassador",
     image: "/images/Meghana_Markting_Lead.jpg",
     linkedin: "https://www.linkedin.com/in/adieshwar-reddy-mogili-3b4b11332",
   },
@@ -128,6 +126,7 @@ const coreTeam: TeamMemberType[] = [
     name: "M. Ganesh",
     role: "Treasurer",
     designation: "Student Leader",
+    msTitle: "Student Lead",
     image: "/images/Ganesh_Event_Coord.jpg",
     linkedin: "https://www.linkedin.com/in/ganesh-mandugula-147207344",
   },
@@ -136,8 +135,9 @@ const coreTeam: TeamMemberType[] = [
 const departmentTeam: TeamMemberType[] = [
   {
     name: "Shlok",
-    role: "Social Media and PR Lead",
+    role: "Social Media & PR Lead",
     designation: "Creative Team",
+    msTitle: "Student Leader",
     image: "/images/shlok.jpeg",
     linkedin: "https://www.linkedin.com/in/sree-harshitha-vakkantham-40931a310",
   },
@@ -145,35 +145,15 @@ const departmentTeam: TeamMemberType[] = [
     name: "Tanish",
     role: "Deputy Technical Lead",
     designation: "Technical Team",
+    msTitle: "Student Lead",
     image: "/images/tanish.jpg",
     linkedin: "https://www.linkedin.com/in/sree-harshitha-vakkantham-40931a310",
-  },
-  // {
-  //   name: "P. Lakshmi Sai Meghana",
-  //   role: "Marketing Lead",
-  //   designation: "Marketing Team",
-  //   image: "/images/Meghana_Markting_Lead.jpg",
-  //   linkedin: "https://www.linkedin.com/in/meghana-pidaparthi",
-  // },
-  // {
-  //   name: "P. Venkata Sesha Sai Jatin",
-  //   role: "Technical Lead",
-  //   designation: "Technical Team",
-  //   image: "/images/SaiJatin_Technical_Lead.jpg",
-  //   linkedin: "https://www.linkedin.com/in/saijatinpakki",
-  // },
-
-  {
-    name: "Rajnikant Kumar",
-    role: "Event Coordinator",
-    designation: "Events Team",
-    image: "/images/Rajnikant_Event_Coord.jpg",
-    linkedin: "https://www.linkedin.com/in/rajnikant-kumar-27bb22354",
   },
   {
     name: "Divya Rana",
     role: "Data Operations Lead",
     designation: "Technical Team",
+    msTitle: "Student Ambassador",
     image: "/images/Divya_Technical_Lead.jpg",
     linkedin: "https://www.linkedin.com/in/divya-rana-a4634833b",
   },
@@ -181,51 +161,97 @@ const departmentTeam: TeamMemberType[] = [
     name: "V. Siri Chandana",
     role: "Community Engagement Lead",
     designation: "Community Team",
+    msTitle: "Student Ambassador",
     image: "/images/SiriChandana_Community_Engagement.jpg",
     linkedin: "https://www.linkedin.com/in/siri-chandana-vemula",
+  },
+  {
+    name: "Rajnikant Kumar",
+    role: "Event Coordinator",
+    designation: "Events Team",
+    msTitle: "Student Lead",
+    image: "/images/Rajnikant_Event_Coord.jpg",
+    linkedin: "https://www.linkedin.com/in/rajnikant-kumar-27bb22354",
   },
   {
     name: "Sathwik",
     role: "Event Outreach Lead",
     designation: "Events Team",
+    msTitle: "Student Ambassador",
     image: "/images/sathwik.jpg",
-    linkedin: "https://www.linkedin.com/in/siri-chandana-vemula",
+    linkedin: "",
+  },
+  {
+    name: "Bharath",
+    role: "Community Engagement",
+    designation: "Community Team",
+    msTitle: "Student Leader",
+    image: "/images/Bharath_Community_Engagement.jpg",
+    linkedin: "",
+  },
+  {
+    name: "L. Likitha Sai",
+    role: "Community Engagement",
+    designation: "Community Team",
+    msTitle: "Student Ambassador",
+    image: "/images/LikhithaSai_Community_Engagement.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Manasa",
+    role: "Event Coordinator",
+    designation: "Events Team",
+    msTitle: "Student Ambassador",
+    image: "/images/Manasa_Event_Coord.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Sami",
+    role: "Team Member",
+    designation: "MLSC MRUH",
+    msTitle: "Student Ambassador",
+    image: "/placeholder-user.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Pranathi",
+    role: "Team Member",
+    designation: "MLSC MRUH",
+    msTitle: "Student Ambassador",
+    image: "/placeholder-user.jpg",
+    linkedin: "",
+  },
+  {
+    name: "Rishikesh",
+    role: "Team Member",
+    designation: "MLSC MRUH",
+    msTitle: "Student Ambassador",
+    image: "/placeholder-user.jpg",
+    linkedin: "",
   },
 ];
+
+/* ─────────────────── PAGE ─────────────────── */
 
 export default function TeamPage() {
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
-      {/* Dynamic Background Elements */}
+      {/* Dynamic Background */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-background to-background" />
         <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-blue-600/20 blur-[100px]"
         />
         <motion.div
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.4, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
+          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.4, 0.3] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-violet-600/20 blur-[100px]"
         />
       </div>
 
+      {/* Hero */}
       <section className="relative pt-32 pb-12 px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -260,13 +286,11 @@ export default function TeamPage() {
           data: departmentTeam,
           gradient: "from-violet-500/10 via-transparent to-transparent",
         },
-      ].map((section, idx) => (
+      ].map((section) => (
         <section key={section.title} className="py-12 md:py-20 relative">
-          {/* Section Decoration */}
           <div
             className={`absolute inset-0 -z-10 bg-gradient-to-b ${section.gradient} opacity-50`}
           />
-
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -288,7 +312,7 @@ export default function TeamPage() {
               viewport={{ once: true, margin: "-100px" }}
               className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-10"
             >
-              {section.data.map((m, i) => (
+              {section.data.map((m) => (
                 <TeamMember key={m.name} member={m} />
               ))}
             </motion.div>
@@ -296,6 +320,7 @@ export default function TeamPage() {
         </section>
       ))}
 
+      {/* Join CTA */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-violet-600/10" />
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
@@ -315,23 +340,28 @@ export default function TeamPage() {
                   color: "text-[#E1306C]",
                   border: "border-[#E1306C]/30",
                   hover: "hover:bg-[#E1306C]",
+                  href: "https://www.instagram.com/mlsc_mruh",
                 },
                 {
                   icon: Linkedin,
                   color: "text-[#0A66C2]",
                   border: "border-[#0A66C2]/30",
                   hover: "hover:bg-[#0A66C2]",
+                  href: "https://www.linkedin.com/company/mlsc-mru",
                 },
                 {
                   icon: Youtube,
                   color: "text-[#FF0000]",
                   border: "border-[#FF0000]/30",
                   hover: "hover:bg-[#FF0000]",
+                  href: "https://www.youtube.com/@mlsc_mruh",
                 },
               ].map((social, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`h-16 w-16 flex items-center justify-center rounded-full border ${social.border} bg-card/50 backdrop-blur-md ${social.color} ${social.hover} hover:text-white transition-all duration-300 hover:scale-110 shadow-lg`}
                 >
                   <social.icon size={28} />
