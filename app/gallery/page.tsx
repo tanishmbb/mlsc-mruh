@@ -136,8 +136,7 @@ const eventGalleries = [
     date: "March 25, 2026",
     images: [
       "/images/event8poster.jpeg",
-      "/images/event8/Img1.jpg",
-      // Img2 removed as requested (3rd image)
+      // Img1 and Img2 removed
       "/images/event8/Img3.jpg",
       "/images/event8/Img4.jpg",
       "/images/event8/Img5.jpg",
